@@ -1,4 +1,4 @@
-module github.com/junegunn/fzf
+module github.com/karnh/fzf
 
 require (
 	github.com/gdamore/tcell v1.3.0
