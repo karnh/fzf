@@ -309,15 +309,15 @@ func Run(opts *Options, revision string) {
 								deferred = false
 								terminal.startChan <- true
 							} else if val.final {
-								if opts.Exit0 && count == 0 || opts.Select1 && count == 1 {
+								if opts.Exit0 && count == 0 || opts.Select1 && count == 1 || opts.SelectFirst {
 									if opts.PrintQuery {
 										opts.Printer(opts.Query)
 									}
 									if len(opts.Expect) > 0 {
 										opts.Printer("")
 									}
-									for i := 0; i < count; i++ {
-										opts.Printer(val.Get(i).item.AsString(opts.Ansi))
+									if count != 0 {
+										opts.Printer(val.Get(0).item.AsString(opts.Ansi))
 									}
 									if count > 0 {
 										os.Exit(exitOk)

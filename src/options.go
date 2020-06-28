@@ -84,7 +84,8 @@ const usage = `usage: fzf [options]
 
   Scripting
     -q, --query=STR       Start the finder with the given query
-    -1, --select-1        Automatically select the only match
+	-1, --select-1        Automatically select the only match
+	--select-first        Automatically select first match
     -0, --exit-0          Exit immediately when there's no match
     -f, --filter=STR      Filter mode. Do not start interactive finder.
     --print-query         Print query as the first line
@@ -199,6 +200,7 @@ type Options struct {
 	Marker      string
 	Query       string
 	Select1     bool
+	SelectFirst bool
 	Exit0       bool
 	Filter      *string
 	ToggleSort  bool
@@ -255,6 +257,7 @@ func defaultOptions() *Options {
 		Marker:      ">",
 		Query:       "",
 		Select1:     false,
+		SelectFirst: false,
 		Exit0:       false,
 		Filter:      nil,
 		ToggleSort:  false,
@@ -1211,6 +1214,8 @@ func parseOptions(opts *Options, allArgs []string) {
 			opts.Exit0 = true
 		case "+0", "--no-exit-0":
 			opts.Exit0 = false
+		case "--select-first":
+			opts.SelectFirst = true
 		case "--read0":
 			opts.ReadZero = true
 		case "--no-read0":
