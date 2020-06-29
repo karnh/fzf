@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/junegunn/fzf/src/tui"
+	"github.com/karnh/fzf/src/tui"
 )
 
 func TestExtractColor(t *testing.T) {

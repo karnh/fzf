@@ -9,8 +9,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/junegunn/fzf/src/algo"
-	"github.com/junegunn/fzf/src/tui"
+	"github.com/karnh/fzf/src/algo"
+	"github.com/karnh/fzf/src/tui"
 
 	"github.com/mattn/go-runewidth"
 	"github.com/mattn/go-shellwords"

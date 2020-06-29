@@ -16,8 +16,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/junegunn/fzf/src/tui"
-	"github.com/junegunn/fzf/src/util"
+	"github.com/karnh/fzf/src/tui"
+	"github.com/karnh/fzf/src/util"
 )
 
 // import "github.com/pkg/profile"

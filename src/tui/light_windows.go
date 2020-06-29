@@ -6,7 +6,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/karnh/fzf/src/util"
 	"golang.org/x/sys/windows"
 )
 

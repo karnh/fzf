@@ -86,10 +86,10 @@ release-all: clean test
 
 test: $(SOURCES)
 	SHELL=/bin/sh GOOS= $(GO) test -v -tags "$(TAGS)" \
-				github.com/junegunn/fzf/src \
-				github.com/junegunn/fzf/src/algo \
-				github.com/junegunn/fzf/src/tui \
-				github.com/junegunn/fzf/src/util
+				github.com/karnh/fzf/src \
+				github.com/karnh/fzf/src/algo \
+				github.com/karnh/fzf/src/tui \
+				github.com/karnh/fzf/src/util
 
 install: bin/fzf
 

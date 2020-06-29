@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/junegunn/fzf/src/algo"
-	"github.com/junegunn/fzf/src/util"
+	"github.com/karnh/fzf/src/algo"
+	"github.com/karnh/fzf/src/util"
 )
 
 // fuzzy
